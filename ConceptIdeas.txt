@@ -9,8 +9,12 @@ Level 6 = Boss ? -> May be different micro-games, w/ faceoff animation at start
 
 
 Games:
-"Normal" -> Cut, Jump, Drive, Dodge, Catch
-
+"Normal" -> Cut, Jump, Drive, Dodge, Catch, Boss (Jump, Hit, Run)
+"Rebellous" -> Steal, Drive Over, Cut (Bikini), Smoke, Drink, Boss (Cut, ThrowBack, Dodge)
+"Teenage" -> Wash, Clothe, Win, Protect, Dance, Boss (Dodge, Hit) 
+Old women chase
+80's teenagers activities
+Maladroit
 
 Universe: Synthwave Fro-Samurai (Vice City)
 
