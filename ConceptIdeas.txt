@@ -35,3 +35,89 @@ que stimuler le dépassement de soi, la compétitivité et le sentiment d'incarn
 	Micro-Jeux:
 
 1 - Conduite après la défaite
+	What: Jeu dans lequel le joueur contrôle la voiture de son personnage, dans lequel son but est de parcourir
+la plus grande distance en évitant des obstacles et ce dans un temps imparti.
+	Why: Mettre à l'épreuve les capacités congitives de measurement et de rélexes du joueur.
+	Who: Joueurs cibles du jeu
+	When: Au début du jeu, après la défaite cinématique, dans une même ambiance.
+Mécaniques: Déplacements (gyro/swipe), obstacles, accélération, temps, distance, score.
+Metrics: Distance, Obstacles, Score, temps.
+2 - Pushing-Ups
+	What: Jeu dans lequel le joueur controle son personnage et doit effectuer le plus de pompes possibles dans
+un temps imparti.
+	Why: Mettre à l'épreuve les capacités cognitives measurement du joueur.
+	Who: Joueurs cibles.
+	When: Après le retour du joueur à son "antre", dans la même ambiance que le jeu.
+Mécaniques: Press (pompes), temps
+Métrics: NbrePompes, temps
+3 - Dance
+	What: Jeu dans lequel le joueur doit effectuer des pas de danses afin de réaliser le meilleur score à l'issue 
+du temps imparti en appuyant avec le meilleur timing sur les inputs aparaissant à l'écran.
+	Why: Mettre à l'épreuve les capacités cognitives de timing et de measurement du joueur.
+	     Mettre le joueur dans la peau du personnage et de son activité.
+	Who: Joueurs cibles.
+	When: Après le micro-jeu "Pushings-Ups", dans la même ambiance.
+Mécaniques: Inputs de timing, score, temps, combo ?
+Métrics: Combo, timing, score, temps
+ ------- Speed Up -------
+4 - Slice
+	What: Jeu dans lequel le joueur doit "trancher" le plus de poster possible afin de réaliser le meilleur
+score dans le temps imparti.
+	Why: Mettre à l'épreuve les capacités cognitives de measurement, de réflexes, de précision et de timing.
+	     Ajouter au joueur le sentiment du personnage (revanche)
+	Who: Joueurs cibles
+	When: Suite du précédent mini-jeu.
+Mécaniques: Swipe(trancher), mouvement des posters, temps, score, vitesse, combo ?
+Métrics: score, nbrePosters, combo ?, statutPosters (tranché, pas tranché), temps
+5 - Reaction Time
+	What: Jeu dans lequel, au sein de son rêve, le joueur aperçoit la silhouette de son ennemi, le but est d'appuyer
+              sur cette "apparition" le plus rapidement possible afin de générer le plus de points.
+	Why: Mettre à l'épreuve les capacités cognitives de réflexes du joueur.
+	     Ajouter au joueur le sentiment du personnage (revanche)
+	Who: Joueurs cibles
+	When: Lors d'un rêve.
+Mécaniques: Press, Instant spawn, timing, temps, vitesse
+Métrics: Score, vitesse
+6 - Alix Battle
+	What: Jeu dans lequel le joueur affronte l'ennemi en cause de sa quête et des ses précédents jeux. Le but 
+	étant de réaliser les inputs-combos (chaines de direction); le plus rapidement possible dans un temps imparti.
+	Why : Mettre à l'épreuve les capacités cognitives de précision et de measurement du joueur.
+	      Mettre un terme à la quête du joueur en lui donnant l'opportunité de victoire.
+	Who: Joueurs cibles.
+	When: Disco, après le micro-jeu précédent.
+Mécaniques: Combo, Swipe ou Input Flèches, score, temps
+Métrics: Score, temps
+
+Expérience Utilisateur:
+Au travers de la direction artistique, du personnage et de son histoire, le but est de créer un lien entre le joueur
+et l'avatar qu'il incarne, qu'il ressente ce que le personnage peut ressentir ainsi que de servir du personnage
+pour transmettre ses sentiments et ses intentions. Stimuler l'instinct du joueur afin d'être le meilleur, dans le jeu
+mais également auprès de leur amis ou proches avec qui ils se compareront lorsqu'ils joueront au travers de leurs
+scores respectifs. Le but est également de plonger le joueur, étant donné la cible, dans un univers qu'ils ne connaissent
+pas et qu'ils découvrent au même temps que le personnage afin de renforcer l'immersion. Nous voulons également faire
+passer le message qu'il peut y avoir de meilleurs personnes que nous, plus talentueuses dans le domaine où nous pensons
+être le meilleur et qu'il ne faut pas prendre les choses que nous possédons comme acquises. Nous souhaitons également
+faire comprendre, au travers du personnage et des différents étapes de son entrainement représenté par les micro-jeux, 
+le sentiment de récompenses qui advient lorsque nous travaillons dur. Le tout en passant par un univers coloré et léger
+qui attise la curiosité. Au travers des valeurs du bushido représenté par le personnage, nous essayons de faire
+découvrir une facon de vivre et des valeurs "disparus", un esprit sain de revanche et du travail mélangé à la danse
+afin de montrer que les chemins que l'on se fixe ne sont pas ancrés dans le marbre et qu'il est important de suivre
+ses envies et ses passions. Les mécaniques simples mais diverse et la "frénésie" des micro-jeux viennent accentuer 
+la légereté de l'univers.
+
+	Réfs et justifications:
+Samurai & Bushido -> samurai -> valeurs bushido, personnage attrayant (curio) & katana -> entrainement et micro
+Danse -> univers léger et fun, ambiance et pose des objectifs/micros
+80's synthwave vibes -> danse, univers colorimétrique, voyage tempo du perso, curiosité & graphisme
+Girlband -> 80's, "ennemis"/lore, motivations joueurs
+
+	Contraintes & Potentiels:
+Potentiels: Attirer la curiosité et donc un plus grand public, univers visuel très fort et en faire une marque de
+la compagnie, créer une communauté, une suite, faire le buzz par les messages véhiculés, l'esprit et la DA
+Contraintes: rendre l'univers cohérent, faire comprendre le/les messages passés, ne pas surcharge d'informations
+visuelles et colorielles.
+
+	Portée du jeu:
+Le jeu possède une portée plus grande que celle de la cible par les sujets abordés, les origines/valeurs de perso,
+peut succiter la curiosité, amener de la nostalgie (80's) chez les personnes ayant vécues l'époque. International,
+sujet japonais (samurai/bushido), attiré fan 
