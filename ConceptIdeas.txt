@@ -40,7 +40,7 @@ la plus grande distance en évitant des obstacles et ce dans un temps imparti.
 	Why: Mettre à l'épreuve les capacités congitives de measurement et de rélexes du joueur.
 	Who: Joueurs cibles du jeu
 	When: Au début du jeu, après la défaite cinématique, dans une même ambiance.
-Mécaniques: Déplacements (gyro/swipe), obstacles, accélération, temps, distance, score.
+Mécaniques: Déplacements (gyro/swipe), obstacles(appartition/vitesse/taille), accélération, temps, distance, score.
 Metrics: Distance, Obstacles, Score, temps.
 2 - Pushing-Ups
 	What: Jeu dans lequel le joueur controle son personnage et doit effectuer le plus de pompes possibles dans
@@ -67,7 +67,7 @@ score dans le temps imparti.
 	     Ajouter au joueur le sentiment du personnage (revanche)
 	Who: Joueurs cibles
 	When: Suite du précédent mini-jeu.
-Mécaniques: Swipe(trancher), mouvement des posters, temps, score, vitesse, combo ?
+Mécaniques: Swipe(trancher), mouvement des posters/vitesse et vit d'appa, temps, score, vitesse, combo ?
 Métrics: score, nbrePosters, combo ?, statutPosters (tranché, pas tranché), temps
 5 - Reaction Time
 	What: Jeu dans lequel, au sein de son rêve, le joueur aperçoit la silhouette de son ennemi, le but est d'appuyer
@@ -106,6 +106,8 @@ ses envies et ses passions. Les mécaniques simples mais diverse et la "frénés
 la légereté de l'univers.
 
 	Réfs et justifications:
+Ware -> Wario Ware/Rythm Heaven/Dumb ways to die -> mécaniques principale/Score
+Chrono Games -> mécaniques + en tel temps, Wii Party/Mario Party etc.
 Samurai & Bushido -> samurai -> valeurs bushido, personnage attrayant (curio) & katana -> entrainement et micro
 Danse -> univers léger et fun, ambiance et pose des objectifs/micros
 80's synthwave vibes -> danse, univers colorimétrique, voyage tempo du perso, curiosité & graphisme
@@ -116,8 +118,11 @@ Potentiels: Attirer la curiosité et donc un plus grand public, univers visuel t
 la compagnie, créer une communauté, une suite, faire le buzz par les messages véhiculés, l'esprit et la DA
 Contraintes: rendre l'univers cohérent, faire comprendre le/les messages passés, ne pas surcharge d'informations
 visuelles et colorielles.
+Perso féminin.
 
 	Portée du jeu:
 Le jeu possède une portée plus grande que celle de la cible par les sujets abordés, les origines/valeurs de perso,
 peut succiter la curiosité, amener de la nostalgie (80's) chez les personnes ayant vécues l'époque. International,
-sujet japonais (samurai/bushido), attiré fan 
+sujet japonais (samurai/bushido), attiré fan de culture japonaise
+
+zones possibles: Salle arcade, salle de sport, dinner, motel, vhs store, disco (alix)
