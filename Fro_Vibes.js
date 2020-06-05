@@ -6,14 +6,17 @@ var config = {
 		gamepad: true
 	},
 physics: {
-        default: 'arcade',
-        arcade: {
-            gravity: { y: 0 },
-            debug: true
-        }
+        default: 'matter',
+        matter: {
+					enableSleeping: true,
+					debug: true,
+					gravity: {
+            y: 0
+        },
+				}
     },
 
-scene: [Scene1]
+scene: [Main_Screen]
 
 };
 
