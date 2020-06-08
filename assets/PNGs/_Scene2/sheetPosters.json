@@ -1,0 +1,62 @@
+{
+	"textures": [
+		{
+			"image": "sheetPosters.png",
+			"format": "RGBA8888",
+			"size": {
+				"w": 879,
+				"h": 547
+			},
+			"scale": 1,
+			"frames": [
+				{
+					"filename": "Poster1.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 524,
+						"h": 545
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 524,
+						"h": 545
+					},
+					"frame": {
+						"x": 1,
+						"y": 1,
+						"w": 524,
+						"h": 545
+					}
+				},
+				{
+					"filename": "Poster2.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 351,
+						"h": 406
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 351,
+						"h": 406
+					},
+					"frame": {
+						"x": 527,
+						"y": 1,
+						"w": 351,
+						"h": 406
+					}
+				}
+			]
+		}
+	],
+	"meta": {
+		"app": "https://www.codeandweb.com/texturepacker",
+		"version": "3.0",
+		"smartupdate": "$TexturePacker:SmartUpdate:15d39880a7002a7cae408ddec675aab8:78f116d2fe97d4fc18357aa812c9d972:3f51acfbd831f0f2edb62cb7a90edafc$"
+	}
+}
