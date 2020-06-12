@@ -16,7 +16,12 @@ preload(){
   this.load.image('retour','assets/PNGs/_MainScreen/Retour.png');
 
   this.load.json('howto', 'assets/PNGs/_MainScreen/HowTo.json');
-  this.load.atlas('sheet', 'assets/PNGs/_MainScreen/sheet.png', 'assets/PNGs/_MainScreen/sheet.json')
+  this.load.atlas('sheet', 'assets/PNGs/_MainScreen/sheet.png', 'assets/PNGs/_MainScreen/sheet.json');
+
+  this.load.audio('backgroundMusic2','music2.mp3'); // musique de fond
+  this.load.audio('backgroundMusic','music.mp3');
+  this.load.audio('backgroundMusic_Pompes','music_pompes.mp3');
+  this.load.audio('backgroundMusic_Transi1','music_transi1_2.mp3');
 
 }
 
@@ -30,11 +35,25 @@ create(){
     explications = new Buttons (3, this.add.image(960,540,'explications').setActive(false).setVisible(false));
     retour = new Buttons (4, this.add.image(1690,990,'retour').setActive(false).setVisible(false));
 
+  //
+
+  music = this.sound.add('backgroundMusic2'); // music
+  musicConfig = {
+    mute: false,
+    volume: 0.5,
+    detune: 0,
+    seek: 0,
+    loop: true,
+    delay: 0
+    };
+  music.play(musicConfig);
+
 }
 
 update(){
         if (sceneswitch == 1) {
-            this.scene.start('zones');
+            this.scene.start("zones");
+            music.stop();
         }
     }
 

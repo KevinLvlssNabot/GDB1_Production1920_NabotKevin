@@ -1,0 +1,451 @@
+{
+	"textures": [
+		{
+			"image": "spritesheet-0.png",
+			"format": "RGBA8888",
+			"size": {
+				"w": 1810,
+				"h": 1899
+			},
+			"scale": 1,
+			"frames": [
+				{
+					"filename": "Fro0014.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 687,
+						"h": 551
+					},
+					"spriteSourceSize": {
+						"x": 41,
+						"y": 101,
+						"w": 614,
+						"h": 449
+					},
+					"frame": {
+						"x": 1,
+						"y": 1,
+						"w": 614,
+						"h": 449
+					}
+				},
+				{
+					"filename": "Fro0006.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 687,
+						"h": 551
+					},
+					"spriteSourceSize": {
+						"x": 47,
+						"y": 94,
+						"w": 603,
+						"h": 457
+					},
+					"frame": {
+						"x": 617,
+						"y": 1,
+						"w": 603,
+						"h": 457
+					}
+				},
+				{
+					"filename": "Fro0015.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 687,
+						"h": 551
+					},
+					"spriteSourceSize": {
+						"x": 55,
+						"y": 84,
+						"w": 589,
+						"h": 467
+					},
+					"frame": {
+						"x": 1,
+						"y": 452,
+						"w": 589,
+						"h": 467
+					}
+				},
+				{
+					"filename": "Fro0005.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 687,
+						"h": 551
+					},
+					"spriteSourceSize": {
+						"x": 63,
+						"y": 75,
+						"w": 574,
+						"h": 476
+					},
+					"frame": {
+						"x": 1222,
+						"y": 1,
+						"w": 574,
+						"h": 476
+					}
+				},
+				{
+					"filename": "Fro0016.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 687,
+						"h": 551
+					},
+					"spriteSourceSize": {
+						"x": 69,
+						"y": 67,
+						"w": 562,
+						"h": 484
+					},
+					"frame": {
+						"x": 592,
+						"y": 460,
+						"w": 562,
+						"h": 484
+					}
+				},
+				{
+					"filename": "Fro0004.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 687,
+						"h": 551
+					},
+					"spriteSourceSize": {
+						"x": 79,
+						"y": 56,
+						"w": 544,
+						"h": 493
+					},
+					"frame": {
+						"x": 1,
+						"y": 921,
+						"w": 544,
+						"h": 493
+					}
+				},
+				{
+					"filename": "Fro0007.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 687,
+						"h": 551
+					},
+					"spriteSourceSize": {
+						"x": 33,
+						"y": 113,
+						"w": 629,
+						"h": 435
+					},
+					"frame": {
+						"x": 1,
+						"y": 1416,
+						"w": 629,
+						"h": 435
+					}
+				},
+				{
+					"filename": "Fro0013.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 687,
+						"h": 551
+					},
+					"spriteSourceSize": {
+						"x": 28,
+						"y": 118,
+						"w": 637,
+						"h": 428
+					},
+					"frame": {
+						"x": 547,
+						"y": 946,
+						"w": 637,
+						"h": 428
+					}
+				},
+				{
+					"filename": "Fro0008.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 687,
+						"h": 551
+					},
+					"spriteSourceSize": {
+						"x": 20,
+						"y": 132,
+						"w": 653,
+						"h": 410
+					},
+					"frame": {
+						"x": 1156,
+						"y": 479,
+						"w": 653,
+						"h": 410
+					}
+				},
+				{
+					"filename": "Fro0017.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 687,
+						"h": 551
+					},
+					"spriteSourceSize": {
+						"x": 84,
+						"y": 50,
+						"w": 534,
+						"h": 497
+					},
+					"frame": {
+						"x": 1186,
+						"y": 891,
+						"w": 534,
+						"h": 497
+					}
+				},
+				{
+					"filename": "Fro0003.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 687,
+						"h": 551
+					},
+					"spriteSourceSize": {
+						"x": 96,
+						"y": 37,
+						"w": 511,
+						"h": 507
+					},
+					"frame": {
+						"x": 632,
+						"y": 1376,
+						"w": 511,
+						"h": 507
+					}
+				},
+				{
+					"filename": "Fro0018.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 687,
+						"h": 551
+					},
+					"spriteSourceSize": {
+						"x": 100,
+						"y": 33,
+						"w": 504,
+						"h": 508
+					},
+					"frame": {
+						"x": 1145,
+						"y": 1390,
+						"w": 504,
+						"h": 508
+					}
+				}
+			]
+		},
+		{
+			"image": "spritesheet-1.png",
+			"format": "RGBA8888",
+			"size": {
+				"w": 1791,
+				"h": 1419
+			},
+			"scale": 1,
+			"frames": [
+				{
+					"filename": "Fro0012.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 687,
+						"h": 551
+					},
+					"spriteSourceSize": {
+						"x": 17,
+						"y": 135,
+						"w": 657,
+						"h": 405
+					},
+					"frame": {
+						"x": 1,
+						"y": 1,
+						"w": 657,
+						"h": 405
+					}
+				},
+				{
+					"filename": "Fro0009.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 687,
+						"h": 551
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 151,
+						"w": 673,
+						"h": 382
+					},
+					"frame": {
+						"x": 660,
+						"y": 1,
+						"w": 673,
+						"h": 382
+					}
+				},
+				{
+					"filename": "Fro0011.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 687,
+						"h": 551
+					},
+					"spriteSourceSize": {
+						"x": 7,
+						"y": 152,
+						"w": 675,
+						"h": 379
+					},
+					"frame": {
+						"x": 1,
+						"y": 408,
+						"w": 675,
+						"h": 379
+					}
+				},
+				{
+					"filename": "Fro0010.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 687,
+						"h": 551
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 170,
+						"w": 687,
+						"h": 351
+					},
+					"frame": {
+						"x": 1,
+						"y": 789,
+						"w": 687,
+						"h": 351
+					}
+				},
+				{
+					"filename": "Fro0001.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 687,
+						"h": 551
+					},
+					"spriteSourceSize": {
+						"x": 124,
+						"y": 0,
+						"w": 455,
+						"h": 521
+					},
+					"frame": {
+						"x": 1335,
+						"y": 1,
+						"w": 455,
+						"h": 521
+					}
+				},
+				{
+					"filename": "Fro0002.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 687,
+						"h": 551
+					},
+					"spriteSourceSize": {
+						"x": 114,
+						"y": 19,
+						"w": 478,
+						"h": 515
+					},
+					"frame": {
+						"x": 690,
+						"y": 385,
+						"w": 478,
+						"h": 515
+					}
+				},
+				{
+					"filename": "Fro0019.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 687,
+						"h": 551
+					},
+					"spriteSourceSize": {
+						"x": 116,
+						"y": 16,
+						"w": 475,
+						"h": 516
+					},
+					"frame": {
+						"x": 690,
+						"y": 902,
+						"w": 475,
+						"h": 516
+					}
+				},
+				{
+					"filename": "Fro0020.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 687,
+						"h": 551
+					},
+					"spriteSourceSize": {
+						"x": 124,
+						"y": 0,
+						"w": 455,
+						"h": 520
+					},
+					"frame": {
+						"x": 1170,
+						"y": 524,
+						"w": 455,
+						"h": 520
+					}
+				}
+			]
+		}
+	],
+	"meta": {
+		"app": "https://www.codeandweb.com/texturepacker",
+		"version": "3.0",
+		"smartupdate": "$TexturePacker:SmartUpdate:92d3783e6ea2df29fecc26d4bb4ae2cd:7eb7a63713547b577e73738bfdce51cc:891aeea45958f21e96a4508ee113e1b2$"
+	}
+}
