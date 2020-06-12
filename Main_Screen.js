@@ -24,6 +24,7 @@ preload(){
   this.load.audio('backgroundMusic_Transi1','music_transi1_2.mp3');
   this.load.audio('backgroundMusic_Posters','music_posters.mp3');
   this.load.audio('cutting','cutting.mp3');
+  this.load.audio('backgroundMusic_TransiFinal','music_transi_boss.mp3');
 
 }
 
