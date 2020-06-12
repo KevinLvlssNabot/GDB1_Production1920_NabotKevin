@@ -3,6 +3,7 @@ var retour;
 var camera;
 var shapes;
 var sceneswitch = 0;
+var score = 0;
 // scene map
 var backgroundCity; var gym;
 var music; var musicConfig;
@@ -12,4 +13,8 @@ var timedEvent;
 // jeu 1
 var backgroundGym; var instructions; var indications; var chronoImage; var chrono;
 var player; var temps = 10;
-var score = 0; var nmbrePompes = 0;
+var scorePompes = 0; var nmbrePompes = 0;
+// jeu 2
+var backgroundPosters; var temps2 = 10;
+var swipe; var postersShape; var creationEvent;
+var cat1; var cat2; var nbrePoster = 0; var scorePosters = 0; var cutting; var cuttingConfig;

@@ -9,14 +9,14 @@ physics: {
         default: 'matter',
         matter: {
 					enableSleeping: true,
-					debug: true,
+					debug: false,
 					gravity: {
             y: 0
         },
 				}
     },
 
-scene: [Main_Screen, Zones, Transi1, Jeu1, Transi2]
+scene: [Main_Screen, Zones, Transi1, Jeu1, Transi2, Jeu2] //Zones, Transi1, Jeu1, Transi2,
 
 };
 

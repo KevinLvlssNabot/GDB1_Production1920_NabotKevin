@@ -1,6 +1,6 @@
 class Zones extends Phaser.Scene {
   constructor(){
-    super("zones")
+    super("Zones")
   }
 
 

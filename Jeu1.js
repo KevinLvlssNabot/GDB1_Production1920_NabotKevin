@@ -53,15 +53,20 @@ class Jeu1 extends Phaser.Scene {
         instructions.setVisible(false);
         indications.setVisible(false);
         pompes();
-        score++; nmbrePompes++;
+        scorePompes++; nmbrePompes++;
     });
     //
-    chrono = this.add.text(200,150, temps)
+    chrono = this.add.text(-105,-125, temps, { fontFamily : 'Streamster', fontSize : '180px', fill: '#000', padding: chronoImage}); // affichage chrono
+    //
+    timedEvent = this.time.addEvent({ delay: 1000, callback: decompte, callbackScope: this, repeat: 9 }); // décompte et arrêt du chrono
 
   } // accolader fin create
 
   update(){
-
+    if (sceneswitch == 4) { // changement de scene à la fin du décompte
+        this.scene.start('Transi2');
+        music.stop();
+    }
       } // accolade fin update
 
 

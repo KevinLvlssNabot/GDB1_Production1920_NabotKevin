@@ -22,6 +22,8 @@ preload(){
   this.load.audio('backgroundMusic','music.mp3');
   this.load.audio('backgroundMusic_Pompes','music_pompes.mp3');
   this.load.audio('backgroundMusic_Transi1','music_transi1_2.mp3');
+  this.load.audio('backgroundMusic_Posters','music_posters.mp3');
+  this.load.audio('cutting','cutting.mp3');
 
 }
 
@@ -47,12 +49,14 @@ create(){
     delay: 0
     };
   music.play(musicConfig);
-
+    //
+    cat1 = this.matter.world.nextCategory();
+    //
 }
 
 update(){
         if (sceneswitch == 1) {
-            this.scene.start("zones");
+            this.scene.start("Zones");
             music.stop();
         }
     }
