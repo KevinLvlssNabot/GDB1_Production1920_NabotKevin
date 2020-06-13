@@ -18,3 +18,8 @@ var scorePompes = 0; var nmbrePompes = 0;
 var backgroundPosters; var temps2 = 10;
 var swipe; var postersShape; var creationEvent;
 var cat1; var cat2; var nbrePoster = 0; var scorePosters = 0; var cutting; var cuttingConfig;
+// jeu 3
+var backgroundRoom; var coneJaz; var baseJaz;
+var temps3 = 10;
+var coneFro; var baseFro;
+var isComplete = 1; var start = 0;

@@ -125,11 +125,11 @@ Posters.prototype.miss = function () { // méthode pour enlever les posters si l
 };
 //
 function creation (){ // function de création de posters
-  n = 0;
+  n = Phaser.Math.Between(0,1);
 if (n == 0) {
   var poster = new Posters (0, this.matter.add.sprite(Phaser.Math.Between(100, 1700), 50, 'sheetPosters', 'Poster1.png', {shape: postersShape.Poster1}));
 } else if (n == 1) {
-  var poster = new Posters (1, this.matter.add.sprite(x, 50, 'sheetPosters', 'Poster2.png', {shape: postersShape.Poster2}));
+  var poster = new Posters (1, this.matter.add.sprite(Phaser.Math.Between(100, 1700), 50, 'sheetPosters', 'Poster2.png', {shape: postersShape.Poster2}));
 }
   poster._imageP.setCollisionCategory(cat1);
 }
@@ -165,3 +165,130 @@ if (temps2 == 0) {
   }
 }
   //
+function Cones (texture){ // création des cones de couleurs
+    this._texture = texture;
+    this._texture.setInteractive();
+      this._texture.on('pointerdown', (pointer) =>{
+          this.wrong();
+      })
+}
+
+Cones.prototype = Object.create(Phaser.GameObjects.Image.prototype);
+Cones.prototype.constructor = Cones;
+
+Cones.prototype.wrong = function () { // méthode pour changer la couleur du cone
+    this._texture.setTexture('coneFroRouge');
+    this._texture.setY(185);
+};
+//
+function Base (texture){  // création base de couleur
+    this._textureB = texture;
+}
+
+Base.prototype = Object.create(Phaser.GameObjects.Image.prototype);
+Base.prototype.constructor = Base;
+
+Cones.prototype.wrong = function () { // méthode pour changer la couleur de la base
+    this._texture.setTexture('coneFroRouge');
+    this._texture.setY(185);
+};
+//
+function Arrow (numero, texture, swipeDirection, isActive){ // creation de la classe des directions à suivre pour le joueur.
+    this._numero = numero;
+    this._textureD = texture;
+    this._swipeDirection = swipeDirection;
+    this._isActive = isActive;
+}
+
+Arrow.prototype = Object.create(Phaser.GameObjects.Image.prototype);
+Arrow.prototype.constructor = Arrow;
+
+function arrowCreation(){ // creation fleches
+  r = Phaser.Math.Between(0,3); s = Phaser.Math.Between(0,3); t = Phaser.Math.Between(0,3); u = Phaser.Math.Between(0,3);
+  if (start == 0){
+    start = 1;
+    if (r == 0) { // fleche 1
+          arrow1 = new Arrow (1, this.add.image(400,980,'arrowUp'), 0 /*haut*/, 1);
+        } else if (r == 1) {
+          arrow1 = new Arrow (1, this.add.image(400,980,'arrowDown'), 1 /*bas*/, 1);
+    } else if (r == 2) {
+          arrow1 = new Arrow (1, this.add.image(400,980,'arrowLeft'), 2 /*gauche*/, 1);
+    } else if (r == 3) {
+          arrow1 = new Arrow (1, this.add.image(400,980,'arrowRight'), 3 /*droite*/, 1);
+    }
+
+    if (s == 0) { // fleche 2
+                arrow2 = new Arrow (2, this.add.image(800,980,'arrowUp'), 0 /*haut*/, 0);
+              } else if (s == 1) {
+                arrow2 = new Arrow (2, this.add.image(800,980,'arrowDown'), 1 /*bas*/, 0);
+          } else if (s == 2) {
+                arrow2 = new Arrow (2, this.add.image(800,980,'arrowLeft'), 2 /*gauche*/, 0);
+          } else if (s == 3) {
+                arrow2 = new Arrow (2, this.add.image(800,980,'arrowRight'), 3 /*droite*/, 0);
+          }
+
+              if (t == 0) {
+                          arrow3 = new Arrow (3, this.add.image(1200,980,'arrowUp'), 0 /*haut*/, 0);
+                        } else if (t == 1) {
+                          arrow3 = new Arrow (3, this.add.image(1200,980,'arrowDown'), 1 /*bas*/, 0);
+                    } else if (t == 2) {
+                          arrow3 = new Arrow (3, this.add.image(1200,980,'arrowLeft'), 2 /*gauche*/, 0);
+                    } else if (t == 3) {
+                          arrow3 = new Arrow (3, this.add.image(1200,980,'arrowRight'), 3 /*droite*/, 0);
+                    }
+
+                        if (u == 0) {
+                                    arrow4 = new Arrow (4, this.add.image(1600,980,'arrowUp'), 0 /*haut*/, 0);
+                                  } else if (u == 1) {
+                                    arrow4 = new Arrow (4, this.add.image(1600,980,'arrowDown'), 1 /*bas*/, 0);
+                              } else if (u == 2) {
+                                    arrow4 = new Arrow (4, this.add.image(1600,980,'arrowLeft'), 2 /*gauche*/, 0);
+                              } else if (u == 3) {
+                                    arrow4 = new Arrow (4, this.add.image(1600,980,'arrowRight'), 3 /*droite*/, 0);
+                              }
+      } else if (start != 0) { //modification fleche après enchainement
+          if (r == 0) { // fleche 1
+                arrow1._numero = 1; arrow1._textureD.setTexture('arrowUp'); arrow1._swipeDirection	= 0; arrow1._isActive = 1;
+              } else if (r == 1) {
+                arrow1._numero = 1; arrow1._textureD.setTexture('arrowDown'); arrow1._swipeDirection	= 1; arrow1._isActive = 1;
+          } else if (r == 2) {
+                arrow1._numero = 1; arrow1._textureD.setTexture('arrowLeft'); arrow1._swipeDirection	= 2; arrow1._isActive = 1;
+          } else if (r == 3) {
+                arrow1._numero = 1; arrow1._textureD.setTexture('arrowRight'); arrow1._swipeDirection	= 3; arrow1._isActive = 1;
+          }
+
+              if (s == 0) { // fleche 2
+                    arrow2._numero = 2; arrow2._textureD.setTexture('arrowUp'); arrow2._swipeDirection	= 0; arrow2._isActive = 0;
+              } else if (s == 1) {
+                    arrow2._numero = 2; arrow2._textureD.setTexture('arrowDown'); arrow2._swipeDirection	= 1; arrow2._isActive = 0;
+              } else if (s == 2) {
+                    arrow2._numero = 2; arrow2._textureD.setTexture('arrowLeft'); arrow2._swipeDirection	= 2; arrow2._isActive = 0;
+              } else if (s == 3) {
+                    arrow2._numero = 2; arrow2._textureD.setTexture('arrowRight'); arrow2._swipeDirection	= 3; arrow2._isActive = 0;
+              }
+
+                if (t == 0) { // fleche 3
+                      arrow3._numero = 3; arrow3._textureD.setTexture('arrowUp'); arrow3._swipeDirection	= 0; arrow3._isActive = 0;
+                  } else if (t == 1) {
+                      arrow3._numero = 3; arrow3._textureD.setTexture('arrowDown'); arrow3._swipeDirection	= 1; arrow3._isActive = 0;
+                } else if (t == 2) {
+                      arrow3._numero = 3; arrow3._textureD.setTexture('arrowLeft'); arrow3._swipeDirection	= 2; arrow3._isActive = 0;
+                } else if (t == 3) {
+                      arrow3._numero = 3; arrow3._textureD.setTexture('arrowRight'); arrow3._swipeDirection	= 3; arrow3._isActive = 0;
+                }
+
+                  if (u == 0) { // fleche 4
+                        arrow4._numero = 4; arrow4._textureD.setTexture('arrowUp'); arrow4._swipeDirection	= 0; arrow4._isActive = 0;
+                    } else if (u == 1) {
+                        arrow4._numero = 4; arrow4._textureD.setTexture('arrowDown'); arrow4._swipeDirection	= 1; arrow4._isActive = 0;
+                  } else if (u == 2) {
+                        arrow4._numero = 4; arrow4._textureD.setTexture('arrowLeft'); arrow4._swipeDirection	= 2; arrow4._isActive = 0;
+                  } else if (u == 3) {
+                        arrow4._numero = 4; arrow4._textureD.setTexture('arrowRight'); arrow4._swipeDirection	= 3; arrow4._isActive = 0;
+                  }
+      } // J'aurais pu faire plus simple à l'aide de la classe mais c'est fait ^^
+}
+//
+Arrow.prototype.clear = function () { // méthode pour changer la couleur de la base
+    this._texture.destroy();
+};

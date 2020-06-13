@@ -70,7 +70,7 @@ class Jeu2 extends Phaser.Scene {
     //
     chrono = this.add.text(-115,-125, temps2, { fontFamily : 'Streamster', fontSize : '180px', fill: '#000', padding: chronoImage}); // affichage chrono
     //
-    creationEvent = this.time.addEvent({ delay: 200, callback: creation, callbackScope: this, repeat: -1 });//  creation infinie de posters
+    creationEvent = this.time.addEvent({ delay: 100, callback: creation, callbackScope: this, repeat: -1 });//  creation infinie de posters
     timedEvent = this.time.addEvent({ delay: 1000, callback: decompte2, callbackScope: this, repeat: 9 }); // décompte et arrêt du chrono
     //
 

@@ -25,6 +25,7 @@ preload(){
   this.load.audio('backgroundMusic_Posters','music_posters.mp3');
   this.load.audio('cutting','cutting.mp3');
   this.load.audio('backgroundMusic_TransiFinal','music_transi_boss.mp3');
+  this.load.audio('backgroundMusic_Battle','music_battle.mp3');
 
 }
 
@@ -57,7 +58,7 @@ create(){
 
 update(){
         if (sceneswitch == 1) {
-            this.scene.start("Zones");
+            this.scene.start("Jeu3");
             music.stop();
         }
     }
