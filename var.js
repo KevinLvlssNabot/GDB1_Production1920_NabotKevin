@@ -22,4 +22,7 @@ var cat1; var cat2; var nbrePoster = 0; var scorePosters = 0; var cutting; var c
 var backgroundRoom; var coneJaz; var baseJaz;
 var temps3 = 10;
 var coneFro; var baseFro;
-var isComplete = 1; var start = 0;
+var isComplete = 1; var start = 0; var isMissed = 0;
+var downX; var downY; var upX; var upY; var threshold = 100;
+var inputDirection; var scoreBattle = 0; var nbreInputs = 0;
+var swippingBarrier = 0; var scoreMin = 50;

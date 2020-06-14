@@ -150,13 +150,13 @@ if (temps2 == 0) {
           scorePosters = scorePosters*1.40
       } else if (nbrePoster > 50 && nbrePoster < 60) {
           scorePosters = scorePosters*1.50
-      } else if (nmbrePompes > 60 && nbrePoster < 70) {
+      } else if (nbrePoster > 60 && nbrePoster < 70) {
           scorePosters = scorePosters*1.60
       } else if (nbrePoster > 70 && nbrePoster < 80) {
           scorePosters = scorePosters*1.70
       } else if (nbrePoster > 80 && nbrePoster < 90) {
           scorePosters = scorePosters*1.80
-      } else if (nbrePoster > 90 && nmbrePompes < 100) {
+      } else if (nbrePoster > 90 && nbrePoster < 100) {
           scorePosters = scorePosters*1.90
       } else if (nbrePoster > 100) {
           scorePosters = scorePosters*2
@@ -167,30 +167,36 @@ if (temps2 == 0) {
   //
 function Cones (texture){ // création des cones de couleurs
     this._texture = texture;
-    this._texture.setInteractive();
-      this._texture.on('pointerdown', (pointer) =>{
-          this.wrong();
-      })
 }
 
 Cones.prototype = Object.create(Phaser.GameObjects.Image.prototype);
 Cones.prototype.constructor = Cones;
 
+Cones.prototype.right = function () { // méthode pour changer la couleur du cone
+    this._texture.setTexture('coneFroVert');
+    this._texture.setY(105);
+};
+//
 Cones.prototype.wrong = function () { // méthode pour changer la couleur du cone
     this._texture.setTexture('coneFroRouge');
     this._texture.setY(185);
 };
 //
-function Base (texture){  // création base de couleur
-    this._textureB = texture;
+function Base (textureB){  // création base de couleur
+    this._textureBase = textureB;
 }
 
 Base.prototype = Object.create(Phaser.GameObjects.Image.prototype);
 Base.prototype.constructor = Base;
+//
+Base.prototype.rightBase = function () { // méthode pour changer la couleur de la base
+    this._textureBase.setTexture('baseFroVert');
+    this._textureBase.setY(675);
+};
 
-Cones.prototype.wrong = function () { // méthode pour changer la couleur de la base
-    this._texture.setTexture('coneFroRouge');
-    this._texture.setY(185);
+Base.prototype.wrongBase = function () { // méthode pour changer la couleur de la base
+    this._textureBase.setTexture('baseFroRouge');
+    this._textureBase.setY(675);
 };
 //
 function Arrow (numero, texture, swipeDirection, isActive){ // creation de la classe des directions à suivre pour le joueur.
@@ -198,6 +204,9 @@ function Arrow (numero, texture, swipeDirection, isActive){ // creation de la cl
     this._textureD = texture;
     this._swipeDirection = swipeDirection;
     this._isActive = isActive;
+      if (this._isActive == 1 && this._swipeDirection == inputDirection) {
+          this.score();
+      }
 }
 
 Arrow.prototype = Object.create(Phaser.GameObjects.Image.prototype);
@@ -292,3 +301,98 @@ function arrowCreation(){ // creation fleches
 Arrow.prototype.clear = function () { // méthode pour changer la couleur de la base
     this._texture.destroy();
 };
+//
+Arrow.prototype.score = function () {
+    scoreBattle++;
+}
+//
+function scoringPoints(){ // fonction pour marquer des points
+    if (arrow1._isActive == 1 && arrow1._swipeDirection == inputDirection) {
+          nbreInputs++;
+          scoreBattle++;
+          arrow1._isActive = 0; arrow2._isActive = 1;
+          swippingBarrier = 1;
+          baseFro.rightBase();
+          coneFro.right();
+    } else if (arrow2._isActive == 1 && arrow2._swipeDirection == inputDirection) {
+          scoreBattle++;
+          nbreInputs++;
+          arrow2._isActive = 0; arrow3._isActive = 1;
+          swippingBarrier = 1;
+          baseFro.rightBase();
+          coneFro.right();
+    } else if (arrow3._isActive == 1 && arrow3._swipeDirection == inputDirection) {
+          scoreBattle++;
+          nbreInputs++;
+          arrow3._isActive = 0; arrow4._isActive = 1;
+          swippingBarrier = 1;
+          baseFro.rightBase();
+          coneFro.right();
+    } else if (arrow4._isActive == 1 && arrow4._swipeDirection == inputDirection) {
+          scoreBattle = scoreBattle*1.5;
+          scoreBattle++;
+          nbreInputs++;
+          arrow4._isActive = 0; isComplete = 1; arrow1._isActive = 1;
+          swippingBarrier = 1;
+          baseFro.rightBase();
+          coneFro.right();
+    }
+}
+//
+function miss(){ // fonction colorisation mauvais input
+  if (arrow1._isActive == 1 && arrow1._swipeDirection != inputDirection) {
+        isMissed = 1;
+        swippingBarrier = 1;
+        baseFro.wrongBase();
+        coneFro.wrong();
+  } else if (arrow2._isActive == 1 && arrow2._swipeDirection != inputDirection) {
+      isMissed = 1;
+        arrow2._isActive = 0; arrow1._isActive = 1;
+        swippingBarrier = 1;
+        baseFro.wrongBase();
+        coneFro.wrong();
+  } else if (arrow3._isActive == 1 && arrow3._swipeDirection != inputDirection) {
+      isMissed = 1;
+        arrow3._isActive = 0; arrow1._isActive = 1;
+        swippingBarrier = 1;
+        baseFro.wrongBase();
+        coneFro.wrong();
+  } else if (arrow4._isActive == 1 && arrow4._swipeDirection != inputDirection) {
+      isMissed = 1;
+        arrow4._isActive = 0; arrow1._isActive = 1;
+        swippingBarrier = 1;
+        baseFro.wrongBase();
+        coneFro.wrong();
+  }
+}
+//
+function decompte3(){ // fonction décompte et comptabilisation du score
+  temps3 -=1;
+  chrono.setText(temps3);
+
+if (temps3 == 0) {
+  sceneswitch = 5;
+      if (nbreInputs > 10 && nbreInputs < 20) {
+          scoreBattle = scoreBattle*1.10
+      } else if (nbreInputs > 20 && nbreInputs < 30) {
+          scoreBattle = scoreBattle*1.20
+      } else if (nbreInputs > 30 && nbreInputs < 40) {
+          scoreBattle = scoreBattle*1.30
+      } else if (nbreInputs > 40 && nbreInputs < 50) {
+          scoreBattle = scoreBattle*1.40
+      } else if (nbreInputs > 50 && nbreInputs < 60) {
+          scoreBattle = scoreBattle*1.50
+      } else if (nbreInputs > 60 && nbreInputs < 70) {
+          scoreBattle = scoreBattle*1.60
+      } else if (nbreInputs > 70 && nbreInputs < 80) {
+          scoreBattle = scoreBattle*1.70
+      } else if (nbreInputs > 80 && nbreInputs < 90) {
+          scoreBattle = scoreBattle*1.80
+      } else if (nbreInputs > 90 && nbreInputs < 100) {
+          scoreBattle = scoreBattle*1.90
+      } else if (nbreInputs > 100) {
+          scoreBattle = scoreBattle*2
+      }
+    score = score + scoreBattle;
+  }
+}

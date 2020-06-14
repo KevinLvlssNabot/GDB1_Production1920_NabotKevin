@@ -38,9 +38,9 @@ class Jeu3 extends Phaser.Scene {
     baseJaz = this.add.image(550,675,'baseJaz');
     coneJaz = this.add.image(550,110,'coneJaz');
     //
-    baseFro = new Cones (this.add.image(1375,675,'baseFroVert'));
+    baseFro = new Base (this.add.image(1375,675,'baseJaz'));
 
-    coneFro = new Cones (this.add.image(1375,105,'coneFroVert'));
+    coneFro = new Cones (this.add.image(1375,105,'coneJaz'));
     //
     music = this.sound.add('backgroundMusic_Battle'); // music
     musicConfig = {
@@ -56,33 +56,58 @@ class Jeu3 extends Phaser.Scene {
 
     this.input.on('pointerdown', function (pointer){ // ensemble composant la mécanique de swipe
       	swipe = true;
-        isComplete = 1
+        downX = pointer.x;
+        downY = pointer.y;
+        swippingBarrier = 0;
     });
 
-    this.input.on('pointerup', function () {
+    this.input.on('pointerup', function (pointer) {
     	  swipe = false;
     });
 
-/*    this.input.on('pointermove', function (pointer){
-        if (swipe) {
-            instructions.setVisible(false);
+    this.input.on('pointermove', function (pointer){ // mécanique de swipe directionnel
+      upX = pointer.x;
+      upY = pointer.y;
+    if (swippingBarrier == 0) {
+        if (swipe && upX < downX - threshold) {
+            inputDirection = 2;
+            miss(); // fonction de comparaison fleche/input
+            console.log('swipeleft');
+        } else if (swipe && upY > downY + threshold) {
+          inputDirection = 1;
+          miss(); // fonction de comparaison fleche/input
+            console.log('swipeDown');
+        } else if (swipe && upY < downY - threshold) {
+          inputDirection = 0;
+          miss(); // fonction de comparaison fleche/input
+          console.log('swipeUp');
+        } else if (swipe && upX > downX + threshold) {
+          inputDirection = 3;
+          miss(); // fonction de comparaison fleche/input
+          console.log('swipeRight');
         }
-    }); */
+      }
+    });
+
     //
     // var posterTest = new Posters (0, this.matter.add.sprite(500, 500, 'sheetPosters', 'Poster1.png', {shape: postersShape.Poster1}));
     //
-    chrono = this.add.text(-100,-100, temps3, { fontFamily : 'Streamster', fontSize : '180px', fill: '#fff', padding: chronoImage}); // affichage chrono
+    chrono = this.add.text(-100,-100, temps3, { fontFamily : 'Streamster', fontSize : '150px', fill: '#fff', padding: chronoImage}); // affichage chrono
     //
-  //  timedEvent = this.time.addEvent({ delay: 1000, callback: decompte2, callbackScope: this, repeat: 9 }); // décompte et arrêt du chrono
+    timedEvent = this.time.addEvent({ delay: 1000, callback: decompte3, callbackScope: this, repeat: 9 }); // décompte et arrêt du chrono
     //
 
   } // accolader fin create
 
   update(){
-    if (isComplete == 1) { // creation de fleches aléatoire
+    if (isComplete == 1 || isMissed == 1) { // creation de fleches aléatoire
         arrowCreation.call(this);
-        isComplete = 0;
+        isComplete = 0; isMissed = 0;
     };
+    //
+    if (swippingBarrier == 0) {
+          scoringPoints(); // fonction de comparaison fleche/input joueur
+    }
 
     if (sceneswitch == 5) { // changement de scene à la fin du décompte
         this.scene.start('Final_Screen');
