@@ -5,6 +5,10 @@ class Zones extends Phaser.Scene {
 
 
   init(data){
+    score = 0;
+    scoreBattle = 0;
+    scorePompes = 0;
+    scorePosters = 0;
   }
 
 
@@ -31,12 +35,16 @@ class Zones extends Phaser.Scene {
         };
       music.play(musicConfig);
       //
+
   } // accolader fin create
 
   update(){
     if (sceneswitch == 2) {
         this.scene.start('Transi1');
         music.stop();
+    }
+    if (start = 1) {
+      text = this.add.text(140, 600, "Meilleur score : " + bestScore, { fontFamily : 'Streamster', fontSize : '50px', fill: '#fb0098'});
     }
       } // accolade fin update
 

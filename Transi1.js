@@ -5,6 +5,7 @@ class Transi1 extends Phaser.Scene {
 
 
   init(data){
+    temps = 10; nmbrePompes = 0;
   }
 
 

@@ -5,6 +5,7 @@ class Jeu3 extends Phaser.Scene {
 
 
   init(data){
+
   }
 
 
@@ -26,10 +27,6 @@ class Jeu3 extends Phaser.Scene {
       this.load.image('jaz1','assets/SequencePNG/Jaz0001.png');
       this.load.image('fro1','assets/SequencePNG/Moves0001.png');
       //
-      this.load.spritesheet('jaz_dance','assets/Spritesheets/Jaz_Dance2.png', {frameWidth: 667, frameHeight: 711});
-      this.load.spritesheet('fro_dance1','assets/Spritesheets/Fro_Dance.png', {frameWidth: 409, frameHeight: 670, spacing: 20});
-      this.load.spritesheet('fro_dance2','assets/Spritesheets/Fro_Dance2.png', {frameWidth: 578, frameHeight: 673, padding: 1});
-      //
 
 
   } // accolade fin preload
@@ -39,7 +36,7 @@ class Jeu3 extends Phaser.Scene {
     this.anims.create({
       key: 'dancing_Jaz',
       frames: this.anims.generateFrameNumbers('jaz_dance', {start: 0, end: 124}),
-      frameRate: 15,
+      frameRate: 29,
       repeat: -1
     });
 
@@ -144,7 +141,7 @@ class Jeu3 extends Phaser.Scene {
 
     if (sceneswitch == 5) { // changement de scene à la fin du décompte
         this.scene.start('Final_Screen');
-        music.stop();
+        
     }
     //
 

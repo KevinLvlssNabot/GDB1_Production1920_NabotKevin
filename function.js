@@ -337,6 +337,7 @@ function scoringPoints(){ // fonction pour marquer des points
           swippingBarrier = 1;
           baseFro.rightBase();
           coneFro.right();
+          isComplete = 1;
         //  player.anims.play('dancing_Fro2');
     }
 }

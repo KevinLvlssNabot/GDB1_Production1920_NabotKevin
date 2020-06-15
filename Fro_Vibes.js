@@ -16,7 +16,7 @@ physics: {
 				}
     },
 
-scene: [Main_Screen, Zones, Transi1, Jeu1, Transi2, Jeu2, Transi3, Jeu3] //Zones, Transi1, Jeu1, Transi2,
+scene: [Main_Screen, Zones, Transi1, Jeu1, Transi2, Jeu2, Transi3, Jeu3, Final_Screen] //Zones, Transi1, Jeu1, Transi2,
 
 };
 

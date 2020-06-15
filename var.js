@@ -26,3 +26,5 @@ var isComplete = 1; var start = 0; var isMissed = 0;
 var downX; var downY; var upX; var upY; var threshold = 100;
 var inputDirection; var scoreBattle = 0; var nbreInputs = 0;
 var swippingBarrier = 0; var scoreMin = 50; var jaz;
+// final screen
+var text; var bestScore = 0;

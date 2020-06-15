@@ -26,7 +26,9 @@ preload(){
   this.load.audio('cutting','cutting.mp3');
   this.load.audio('backgroundMusic_TransiFinal','music_transi_boss.mp3');
   this.load.audio('backgroundMusic_Battle','music_battle.mp3');
-
+  this.load.spritesheet('jaz_dance','assets/Spritesheets/Jaz_Dance2.png', {frameWidth: 667, frameHeight: 711});
+  this.load.spritesheet('fro_dance1','assets/Spritesheets/Fro_Dance.png', {frameWidth: 409, frameHeight: 670, spacing: 20});
+  this.load.spritesheet('fro_dance2','assets/Spritesheets/Fro_Dance2.png', {frameWidth: 578, frameHeight: 673, padding: 1});
 }
 
 create(){
@@ -58,7 +60,7 @@ create(){
 
 update(){
         if (sceneswitch == 1) {
-            this.scene.start("Jeu3");
+            this.scene.start("Zones");
             music.stop();
         }
     }
