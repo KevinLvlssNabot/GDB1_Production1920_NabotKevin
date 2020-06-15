@@ -56,7 +56,7 @@ class Jeu1 extends Phaser.Scene {
         scorePompes++; nmbrePompes++;
     });
     //
-    chrono = this.add.text(-105,-125, temps, { fontFamily : 'Streamster', fontSize : '180px', fill: '#000', padding: chronoImage}); // affichage chrono
+    chrono = this.add.text(-105,-125, temps, { fontFamily : 'Streamster', fontSize : '150px', fill: '#000', padding: chronoImage}); // affichage chrono
     //
     timedEvent = this.time.addEvent({ delay: 1000, callback: decompte, callbackScope: this, repeat: 9 }); // décompte et arrêt du chrono
 
