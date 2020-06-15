@@ -11,6 +11,7 @@ class Jeu3 extends Phaser.Scene {
   preload(){
       this.load.image('backgroundBattle','assets/PNGs/_Scene3/Room.png');
       this.load.image('instructions3','assets/PNGs/_Scene3/Instructions.png'); // A EXPORTER
+      this.load.image('indications3','assets/PNGs/_Scene3/Indications.png');
       this.load.image('chronoImage3','assets/PNGs/_Scene3/Chrono.png');
       this.load.image('coneJaz','assets/PNGs/_Scene3/ConeJaz.png');
       this.load.image('baseJaz','assets/PNGs/_Scene3/BaseConeJaz.png');
@@ -22,25 +23,53 @@ class Jeu3 extends Phaser.Scene {
       this.load.image('arrowUp','assets/PNGs/_Scene3/ArrowUp.png');
       this.load.image('arrowLeft','assets/PNGs/_Scene3/ArrowLeft.png');
       this.load.image('arrowRight','assets/PNGs/_Scene3/ArrowRight.png');
-
+      this.load.image('jaz1','assets/SequencePNG/Jaz0001.png');
+      this.load.image('fro1','assets/SequencePNG/Moves0001.png');
       //
-    //  this.load.animation('fro_pompes','Fro_pompes.json');
+      this.load.spritesheet('jaz_dance','assets/Spritesheets/Jaz_Dance2.png', {frameWidth: 667, frameHeight: 711});
+      this.load.spritesheet('fro_dance1','assets/Spritesheets/Fro_Dance.png', {frameWidth: 409, frameHeight: 670, spacing: 20});
+      this.load.spritesheet('fro_dance2','assets/Spritesheets/Fro_Dance2.png', {frameWidth: 578, frameHeight: 673, padding: 1});
+      //
+
 
   } // accolade fin preload
 
 
   create(){
+    this.anims.create({
+      key: 'dancing_Jaz',
+      frames: this.anims.generateFrameNumbers('jaz_dance', {start: 0, end: 124}),
+      frameRate: 15,
+      repeat: -1
+    });
+
+    this.anims.create({
+      key: 'dancing_Fro',
+      frames: this.anims.generateFrameNumbers('fro_dance1', {start: 0, end: 29}),
+      frameRate: 29,
+      repeat: 0
+    });
+
+    this.anims.create({
+      key: 'dancing_Fro2',
+      frames: this.anims.generateFrameNumbers('fro_dance2', {start: 0, end: 89}),
+      frameRate: 29,
+      repeat: 0
+    });
     //
     backgroundRoom = this.add.image(960,540,'backgroundBattle'); // fond d'écran
     //
-  //  instructions = this.add.image(960,200,'instructions3');
+    instructions = this.add.image(960,100,'instructions3');
     chronoImage = this.add.image(150,150,'chronoImage3');
     baseJaz = this.add.image(550,675,'baseJaz');
+    jaz = this.matter.add.sprite(570,350,'jaz_dance').anims.play('dancing_Jaz');
     coneJaz = this.add.image(550,110,'coneJaz');
     //
     baseFro = new Base (this.add.image(1375,675,'baseJaz'));
-
+    player = this.matter.add.sprite(1375,350,'fro_dance1');
     coneFro = new Cones (this.add.image(1375,105,'coneJaz'));
+    //
+    indications = this.add.image(960,800,'indications3');
     //
     music = this.sound.add('backgroundMusic_Battle'); // music
     musicConfig = {
@@ -59,6 +88,8 @@ class Jeu3 extends Phaser.Scene {
         downX = pointer.x;
         downY = pointer.y;
         swippingBarrier = 0;
+        instructions.setVisible(false);
+        indications.setVisible(false);
     });
 
     this.input.on('pointerup', function (pointer) {
@@ -100,6 +131,8 @@ class Jeu3 extends Phaser.Scene {
   } // accolader fin create
 
   update(){
+
+    //
     if (isComplete == 1 || isMissed == 1) { // creation de fleches aléatoire
         arrowCreation.call(this);
         isComplete = 0; isMissed = 0;

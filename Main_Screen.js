@@ -58,7 +58,7 @@ create(){
 
 update(){
         if (sceneswitch == 1) {
-            this.scene.start("Zones");
+            this.scene.start("Jeu3");
             music.stop();
         }
     }

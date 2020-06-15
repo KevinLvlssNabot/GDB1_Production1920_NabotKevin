@@ -314,6 +314,7 @@ function scoringPoints(){ // fonction pour marquer des points
           swippingBarrier = 1;
           baseFro.rightBase();
           coneFro.right();
+          player.anims.play('dancing_Fro')
     } else if (arrow2._isActive == 1 && arrow2._swipeDirection == inputDirection) {
           scoreBattle++;
           nbreInputs++;
@@ -336,6 +337,7 @@ function scoringPoints(){ // fonction pour marquer des points
           swippingBarrier = 1;
           baseFro.rightBase();
           coneFro.right();
+        //  player.anims.play('dancing_Fro2');
     }
 }
 //
@@ -396,3 +398,4 @@ if (temps3 == 0) {
     score = score + scoreBattle;
   }
 }
+//
