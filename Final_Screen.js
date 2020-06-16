@@ -20,7 +20,7 @@ class Final_Screen extends Phaser.Scene {
     //
     suivant = new Buttons (6, this.add.sprite(1650,970,'boutonSuivant'));// bouton suivant
     //
-    text = this.add.text(150,540, "Merci d'avoir joué, votre score final : " + score, { fontFamily : 'Streamster', fontSize : '100px', fill: '#fff'}); // affichage chrono
+    text = this.add.text(100,540, "Merci d'avoir joué, votre score final : " + score, { fontFamily : 'Streamster', fontSize : '100px', fill: '#fff'}); // affichage chrono
     //
     timedEvent = this.time.addEvent({ delay: 2000, callback: show, callbackScope: this, repeat: 0 });
   } // accolader fin create
@@ -31,6 +31,7 @@ class Final_Screen extends Phaser.Scene {
         music.stop();
     }
     if (bestScore < score) {
+        (score).toFixed();
         bestScore = score;
     }
       } // accolade fin update
