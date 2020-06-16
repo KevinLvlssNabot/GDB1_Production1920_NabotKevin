@@ -9,14 +9,14 @@ class Final_Screen extends Phaser.Scene {
 
 
   preload(){
-      this.load.image('backgroundImage3','assets/PNGs/_TransitionScreen/Transi3.png');
+      this.load.image('backgroundImage4','assets/PNGs/_TransitionScreen/Final.png');
       this.load.image('boutonSuivant','assets/PNGs/_TransitionScreen/TransiBouton.png');
 
   } // accolade fin preload
 
 
   create(){
-    backgroundImage = this.add.image(960,540,'backgroundImage3');// fond d'écran
+    backgroundImage = this.add.image(960,540,'backgroundImage4');// fond d'écran
     //
     suivant = new Buttons (6, this.add.sprite(1650,970,'boutonSuivant'));// bouton suivant
     //
